@@ -10,8 +10,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  	$('form').on('submit', function(e){
-  		console.log($(this).serialize());
+  	$('form').on('submit', function(e) {
+		var a = $(this).serialize()
+  		console.log(a);
+		var img = new Image();
+		img.src = a
+		img.appendTo('body');
   	});
   </script>
 

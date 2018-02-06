@@ -59,7 +59,10 @@ app.post('/search', function(req, res){
 		// body comes back as a string, change to json
 		var JSONbody = JSON.parse(body);
 		// send back the body as our server's response
-		res.json(JSONbody);
+		var url1 = JSONbody["data"][0]["url"]
+		console.log(url1);
+		res.json(url1)
+				
 	});
 });
 
